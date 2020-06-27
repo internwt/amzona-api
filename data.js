@@ -1,13 +1,13 @@
 export default {
     products: [{
         id: '123455',
-        name: "slim tshirs",
+        name: "thigh tshirs",
         image: '/images/d1.jpg',
         brand: "nike",
         price: 15,
         numReview: 4.5,
         star: 10,
-        countInStock: 4,
+        countInStock: 0,
     },
     {
         id: '124455',
