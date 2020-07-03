@@ -1,12 +1,14 @@
 const AWS = require("aws-sdk");
-
+require('dotenv').config()
+console.log(process.env.accessKeyId)
 var aws_remote_config = {
-  accessKeyId: "AKIAIR6MU66IMZX25HOA",
-  secretAccessKey: "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",
+  accessKeyId: process.env.accessKeyId,
+  secretAccessKey:  process.env.secretAccessKey,
   region: "ap-south-1",
 };
 
 AWS.config.update(aws_remote_config);
+AWS.config.update({endpoint: 'http://localhost:5000'});
 
 var awsconfig = {
   conf: aws_remote_config,

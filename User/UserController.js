@@ -1,4 +1,5 @@
 import query from '../query/query'
+
 class UserController {
     async signUp(req, res) {
         const { name, email, password } = req.body
@@ -12,8 +13,8 @@ class UserController {
                 role: 'member'
             }
         }
-        console.log(`parms `,params)
-        const insertUserData = query.put(params)
+        const insertUserData =await  query.put(params)
+        console.log(`parms `,insertUserData)
          res.send(insertUserData)
      }
   
