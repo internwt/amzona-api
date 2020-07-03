@@ -1,3 +1,4 @@
+require('dotenv').config()
 import express from 'express';
 import data from './data'
 import cors from 'cors'
