@@ -7,7 +7,7 @@ const app = express.Router({ mergeParams: true });
 // add new product 
 app.post('/',HandleError(Controller.addProduct))
 // get a single product by id
-// app.get('/product/:productId',Controller)
+app.get('/product/:productId',Controller.getProductById)
 // // update single product by id
 // app.patch('/product/:proudctId',Controller)
 // // delete a single product or multiple productsbyid

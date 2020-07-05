@@ -25,8 +25,17 @@ class ProductController {
 
     }
 
-    async getProudctById(req, res) {
-
+    async getProductById(req, res) {
+        console.log(req.params.id)
+        if(req.params.id){
+             res.send({
+                 name:"shoes",
+                 star:1,
+                 reviews:2
+             })
+        }else {
+            throw Error(`id does not existss`)
+        }
     }
 }
 
